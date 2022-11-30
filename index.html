@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p6_gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+        :root{
+            font-weight: 30px;
+            --verdeoscuro: #405C48 ;
+            --verdeclaro: #45905A;
+            --negro: black;
+            --amarillo-bg: #DCE7BF;
+            --amarillo-bg2: #FFFEFE;
+            --autor:'Oswald', sans-serif; 
+            --titulo:'Oswald', sans-serif; 
+            --descripcion: 'Merriweather', serif;
+        }
+        h1{
+            font-family: var(--autor);
+            color: var(--verdeoscuro);
+            font-size: 1.05em;
+            font-weight: 400;
+            letter-spacing: 0.09em;
+            /*font-variant: small-caps;*/
+            padding: 1em 0 0 0;
+        }
+        h2{
+            padding: 0.5em 1em 0 0;
+            font-family: var(--titulo);
+            color: var(--negro);
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        p{
+            padding: 0.80em 0 0 0;
+            font-family: var(--descripcion);
+            color: var(--negro);
+            font-size: 0.75em;
+            font-weight: 400;
+        }
+    .gallery{
+        background-color: var(--amarillo-bg2);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 2em;
+    }
+    .card{
+        transition: flex-grow 1s;
+        flex-basis: 25%;
+        border: 0.3em;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        border-radius: 0.2em;
+    }
+    .card_img{
+        width: 100%;
+        height: 350px;
+    }
+    .card_img img{
+        object-fit: cover;
+        height: 100%;
+    }
+    .card:nth-child(1) img{
+        object-position: top;
+    }
+    .card:nth-child(3) img{
+        object-position: bottom;
+    }
+    .card:nth-child(3){
+        flex-grow: 1;
+        object-position: top;
+    }
+    .card:nth-child(4) img{
+        object-position: bottom;
+    }
+    .card:nth-child(4){
+        flex-grow: 1;
+    }
+    .card:last-child{
+        object-position: center;
+    }
+    .card:hover{
+        flex-grow: 1;
+        box-shadow: 0.1em 0.1em 0.5em var(--amarillo-bg);
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="gallery">
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/img 1.jpg" alt="">
+                </figure>
+                <header class="card_txt">
+                    <h1>
+                        Leonora Carrington
+                    </h1>
+                    <h2>
+                        La giganta
+                    </h2>
+                    <p>
+                        En esta pieza Carrington vincula a la mujer con el entorno natural, reúne rasgos importantes de su obra como el juego de escalas entre los personajes protagónicos y otros más pequeños que nos recuerdan la obra del Bosco, distribuidos compositivamente en paisajes diversos que coexisten en tres estratos que representan el aire, el agua y la tierra.on la mano derecha al huevo que está por...
+                    </p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/img 2.jpg" alt="">
+                </figure>
+                <header class="card_txt">
+                    <h1>
+                        Remedios Varo
+                    </h1>
+                    <h2>
+                        Bordando el manto terrestre
+                    </h2>
+                    <p>
+                        El cuadro muestra parte de su estancia en el convento al que asistió en su infancia, y las largas y tediosas horas frente a un bordado, mientras alguien les lee. En su eterna ironía y su sentido de la metafísica, Varo hace que de las manos de estas niñas prisioneras salga un manto que es el mundo, un paisaje con torres, lagos, árboles y barcos.
+                    </p>
+                </header>
+            </div>
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/img 3.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+                <h1>
+                    Dorothea Tanning
+                </h1>
+                <h2>
+                    Una pequeña serenata nocturna
+                </h2>
+                <p>
+                    Inquietante, imposible y a la vez tan sugerente. Como si de El Resplandor de Kubrick se tratara, dos niñas gemelas, una rubia y una morena, aparecen en el largo pasillo de un hotel dónde están todas las puertas cerradas excepto una entreabierta, a lo lejos. Luz, resplandor al final. Un girasol deshojado. Una de las niñas tomando el sol y la otra con el pelo ingravido en dirección al techo. Pero no, no les voy a regalar mi interpretación porque les estaría regalando una parte de mí. Hagan juego y prueben ustedes mismos.
+                </p>
+            </header>
+        </div>
+    <div class="card">
+        <figure class="card_img">
+            <img src="img/img 4.jpg" alt="">
+        </figure>
+        <header class="card_txt">
+            <h1>
+                María Izquierdo
+            </h1>
+            <h2>
+                El idilio
+            </h2>
+            <p>
+                En este caso pintó una interpretación personal sobre el amor, sentimiento que plasmó a través de una pareja que coquetea sentada en el brocal de una fuente rematada por una escultura del nacimiento de la diosa Venus, figura que simboliza la belleza del enamoramiento, sin embargo, el paisaje que los rodea es un camino de árboles muertos cobijado por un cielo negro que anuncia una tormenta. Sólo hasta el final de aquel largo camino es donde las nubes se abren y dejan ver el cielo azul. En este caso pintó una interpretación personal sobre el amor, sentimiento que plasmó a través de una pareja que coquetea sentada en el brocal. En este caso pintó una interpretación personal sobre el amor, sentimiento que plasmó a través de una pareja que coquetea sentada en el brocal.En este caso pintó una interpretación personal sobre el amor, sentimiento que plasmó a través de una pareja que coquetea sentada en el brocal
+            </p>
+        </header>
+    </div>
+        <div class="card">
+        <figure class="card_img">
+        <img src="img/img 5.jpg" alt="">
+         </figure>
+        <header class="card_txt">
+        <h1>
+            Katherine Linn Sage
+        </h1>
+        <h2>
+            Margen del silencio
+        </h2>
+        <p>
+            El objeto representado en el lienzo es figurativo y estático; incluso la cortina parece pesada y congelada. El fondo oscuro y la tela azul violeta, que envuelven a la figura del primer plano, insinúan el sentimiento de ansiedad en aquel cuyo rostro el espectador no ve. Los nombres poéticos de muchas obras de Kay Sage, incluida esta, solo refuerzan el estado de ánimo de devastación psicológica, expresado por la combinación de formas geométricas y suaves, como si esta fuera la última reliquia dejada por la civilización en paisajes áridos.
+        </p>
+    </header>
+        </div>
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/img 6.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+            <h1>
+                Marion Elizabeth Adnams
+                </h1>
+                <h2>
+                La Infanta perdida
+                </h2>
+                    <p>
+                    Heredera directa de las heroínas de relatos populares que se adentran en el bosque y con ello en el peligro, esta joven formada por tiras de papel está rodeada por un círculo de árboles despojados de hojas que semejan los barrotes de una jaula. La escena está presidida ―no podría ser de otra forma― por una resplandeciente luna llena que proyecta sombras en el suelo. Fríos tonos azules y violetas inundan el conjunto, que produce una indudable inquietud en el que lo contempla. Una imprecisa amenaza parece cernirse sobre la infanta sin rostro.
+                    </p>
+            </header>
+        </div>
+    </main>
+</body>
+</html>
